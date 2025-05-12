@@ -18,4 +18,16 @@ function secondLargest(arr: number[]): number | null {
   return unique.length >= 2 ? unique[1] : null;
 }
 
-console.log(secondLargest([12, 15, 64, 56, 23]));
+// console.log(secondLargest([12, 15, 64, 56, 23]));
+
+
+// Fibonacci sequence
+function fibonacci(n: number): number[] {
+  const seq = [0, 1];
+  for (let i = 2; i < n; i++) {
+    seq.push(seq[i - 1] + seq[i - 2]);
+  }
+  return seq.slice(0, n);
+}
+
+// console.log(fibonacci(7))
