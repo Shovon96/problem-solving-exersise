@@ -31,3 +31,18 @@ function fibonacci(n: number): number[] {
 }
 
 // console.log(fibonacci(7))
+
+
+// serial execution of async
+async function runSerially(tasks: (() => Promise<any>)[]): Promise<any[]> {
+  const results = [];
+  for (const task of tasks) {
+    results.push(await task());
+  }
+  return results;
+}
+
+const task1 = () => new Promise(res => setTimeout(() => res('A'), 1000));
+const task2 = () => new Promise(res => setTimeout(() => res('B'), 500));
+const task3 = () => new Promise(res => setTimeout(() => res('C'), 300));
+// runSerially([task1, task2, task3]).then(console.log);
