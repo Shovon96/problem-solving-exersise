@@ -46,3 +46,24 @@ const task1 = () => new Promise(res => setTimeout(() => res('A'), 1000));
 const task2 = () => new Promise(res => setTimeout(() => res('B'), 500));
 const task3 = () => new Promise(res => setTimeout(() => res('C'), 300));
 // runSerially([task1, task2, task3]).then(console.log);
+
+
+//  Use Functions, Optional, and Literal Types
+function logUserInfo(
+  name: string,
+  age: number,
+  role?: 'admin' | 'user' | 'guest'
+): void {
+  console.log(`Name: ${name}`);
+  console.log(`Age: ${age}`);
+  
+  if (role) {
+    console.log(`Role: ${role}`);
+  } else {
+    console.log('Role: not specified');
+  }
+}
+
+// Example usage:
+logUserInfo('Alice', 30, 'admin');
+logUserInfo('Bob', 25);  // role is optional
