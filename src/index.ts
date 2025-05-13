@@ -95,3 +95,17 @@ function reverseString(input: string): string {
 }
 
 // console.log(reverseString("hello")); // Output: "olleh"
+
+
+// Type Assertion and Narrowing
+function handleInput(value: string | number): number {
+  if (typeof value === "string") {
+    return value.length;
+  } else {
+    return value * value;
+  }
+}
+
+// Example usage
+// console.log(handleInput("hello")); // Output: 5
+// console.log(handleInput(4));       // Output: 16
