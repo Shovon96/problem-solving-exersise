@@ -64,6 +64,26 @@ function logUserInfo(
   }
 }
 
-// Example usage:
-logUserInfo('Alice', 30, 'admin');
-logUserInfo('Bob', 25);  // role is optional
+// logUserInfo('Alice', 30, 'admin');
+// logUserInfo('Bob', 25);  // role is optional
+
+
+
+// Union & Intersection Type
+type Student = {
+  name: string;
+  course: string;
+  grade: number;
+};
+
+type Employee = {
+  name: string;
+  company: string;
+  salary: number;
+};
+
+// Intersection type: has all properties from both
+type WorkingStudent = Student & Employee;
+
+// Union type: can be either Student or Employee
+type PersonType = Student | Employee;

@@ -59,6 +59,3 @@ function logUserInfo(name, age, role) {
         console.log('Role: not specified');
     }
 }
-// Example usage:
-logUserInfo('Alice', 30, 'admin');
-logUserInfo('Bob', 25); // role is optional
