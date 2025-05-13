@@ -59,3 +59,8 @@ function logUserInfo(name, age, role) {
         console.log('Role: not specified');
     }
 }
+// Reverse String
+function reverseString(input) {
+    return input.split('').reverse().join('');
+}
+// console.log(reverseString("hello")); // Output: "olleh"
