@@ -135,3 +135,32 @@ const admin: AdminUser = {
 
 console.log(describeAdmin(admin));
 
+
+// Optional Chaining
+type Employee2 = {
+  name: string;
+  address?: {
+    street?: string;
+    city?: string;
+  };
+};
+
+function getEmployee2City(employee2: Employee2): string | undefined {
+  return employee2.address?.city;
+}
+
+const emp1: Employee2 = {
+  name: "John Doe",
+  address: {
+    city: "New York"
+  }
+};
+
+const emp2: Employee2 = {
+  name: "Jane Smith"
+};
+
+console.log(getEmployee2City(emp1)); // Output: New York
+console.log(getEmployee2City(emp2)); // Output: undefined
+
+

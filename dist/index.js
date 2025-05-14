@@ -82,3 +82,18 @@ const admin = {
     adminLevel: 2,
 };
 console.log(describeAdmin(admin));
+function getEmployee2City(employee2) {
+    var _a;
+    return (_a = employee2.address) === null || _a === void 0 ? void 0 : _a.city;
+}
+const emp1 = {
+    name: "John Doe",
+    address: {
+        city: "New York"
+    }
+};
+const emp2 = {
+    name: "Jane Smith"
+};
+console.log(getEmployee2City(emp1)); // Output: New York
+console.log(getEmployee2City(emp2)); // Output: undefined
