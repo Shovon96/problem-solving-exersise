@@ -81,7 +81,6 @@ const admin = {
     email: "alice@example.com",
     adminLevel: 2,
 };
-console.log(describeAdmin(admin));
 function getEmployee2City(employee2) {
     var _a;
     return (_a = employee2.address) === null || _a === void 0 ? void 0 : _a.city;
@@ -95,5 +94,12 @@ const emp1 = {
 const emp2 = {
     name: "Jane Smith"
 };
-console.log(getEmployee2City(emp1)); // Output: New York
-console.log(getEmployee2City(emp2)); // Output: undefined
+// console.log(getEmployee2City(emp1)); // Output: New York
+// console.log(getEmployee2City(emp2)); // Output: undefined
+// Nullish Coalescing
+function getDisplayName(name) {
+    return name !== null && name !== void 0 ? name : "Anonymous";
+}
+console.log(getDisplayName("Alice")); // Output: Alice
+console.log(getDisplayName(null)); // Output: Anonymous
+console.log(getDisplayName(undefined)); // Output: Anonymous

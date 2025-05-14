@@ -133,7 +133,7 @@ const admin: AdminUser = {
   adminLevel: 2,
 };
 
-console.log(describeAdmin(admin));
+// console.log(describeAdmin(admin));
 
 
 // Optional Chaining
@@ -160,7 +160,17 @@ const emp2: Employee2 = {
   name: "Jane Smith"
 };
 
-console.log(getEmployee2City(emp1)); // Output: New York
-console.log(getEmployee2City(emp2)); // Output: undefined
+// console.log(getEmployee2City(emp1)); // Output: New York
+// console.log(getEmployee2City(emp2)); // Output: undefined
 
+
+
+// Nullish Coalescing
+function getDisplayName(name: string | null | undefined): string {
+  return name ?? "Anonymous";
+}
+
+console.log(getDisplayName("Alice"));   // Output: Alice
+console.log(getDisplayName(null));      // Output: Anonymous
+console.log(getDisplayName(undefined)); // Output: Anonymous
 
