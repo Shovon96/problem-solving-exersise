@@ -73,6 +73,12 @@ function handleInput(value) {
         return value * value;
     }
 }
-// Example usage
-// console.log(handleInput("hello")); // Output: 5
-// console.log(handleInput(4));       // Output: 16
+function describeAdmin(user) {
+    return `${user.name} (${user.email}) is an admin with level ${user.adminLevel}.`;
+}
+const admin = {
+    name: "Alice",
+    email: "alice@example.com",
+    adminLevel: 2,
+};
+console.log(describeAdmin(admin));

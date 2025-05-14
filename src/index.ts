@@ -109,3 +109,29 @@ function handleInput(value: string | number): number {
 // Example usage
 // console.log(handleInput("hello")); // Output: 5
 // console.log(handleInput(4));       // Output: 16
+
+
+
+// Intersection Types
+type User = {
+  name: string;
+  email: string;
+};
+
+type Admin = {
+  adminLevel: number;
+};
+type AdminUser = User & Admin;
+
+function describeAdmin(user: AdminUser): string {
+  return `${user.name} (${user.email}) is an admin with level ${user.adminLevel}.`;
+}
+
+const admin: AdminUser = {
+  name: "Alice",
+  email: "alice@example.com",
+  adminLevel: 2,
+};
+
+console.log(describeAdmin(admin));
+
