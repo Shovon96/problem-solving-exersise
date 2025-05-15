@@ -121,3 +121,17 @@ function handleError(message) {
     throw new Error(message);
 }
 // handleError("Something went wrong!"); // Throws an error and halts execution
+// Generic function to remove duplicates from an array
+function removeDuplicates(items) {
+    return Array.from(new Set(items));
+}
+function removeUserDuplicates(users) {
+    const seen = new Set();
+    return users.filter(user => {
+        if (seen.has(user.id))
+            return false;
+        seen.add(user.id);
+        return true;
+    });
+}
+// console.log(removeDuplicates([1, 2, 2, 3, 4, 4]));

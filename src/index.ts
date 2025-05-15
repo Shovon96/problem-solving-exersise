@@ -196,3 +196,27 @@ function handleError(message: string): never {
 }
 
 // handleError("Something went wrong!"); // Throws an error and halts execution
+
+
+
+
+// Generic function to remove duplicates from an array
+function removeDuplicates<T>(items: T[]): T[] {
+  return Array.from(new Set(items));
+}
+
+interface User2 {
+  id: number;
+  name: string;
+}
+
+function removeUserDuplicates(users: User2[]): User2[] {
+  const seen = new Set<number>();
+  return users.filter(user => {
+    if (seen.has(user.id)) return false;
+    seen.add(user.id);
+    return true;
+  });
+}
+
+// console.log(removeDuplicates([1, 2, 2, 3, 4, 4]));
