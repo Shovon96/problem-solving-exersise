@@ -170,7 +170,21 @@ function getDisplayName(name: string | null | undefined): string {
   return name ?? "Anonymous";
 }
 
-console.log(getDisplayName("Alice"));   // Output: Alice
-console.log(getDisplayName(null));      // Output: Anonymous
-console.log(getDisplayName(undefined)); // Output: Anonymous
+// console.log(getDisplayName("Alice"));   // Output: Alice
+// console.log(getDisplayName(null));      // Output: Anonymous
+
+
+//  Unknown Type
+function processData(data: unknown): unknown {
+  if (typeof data === "string") {
+    return data.toUpperCase();
+  } else if (typeof data === "number") {
+    return data * data;
+  } else {
+    return "Unsupported data type";
+  }
+}
+
+// console.log(processData(5));       // 25
+// console.log(processData(true));    // "Unsupported data type"
 
