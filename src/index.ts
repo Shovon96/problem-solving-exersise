@@ -188,3 +188,11 @@ function processData(data: unknown): unknown {
 // console.log(processData(5));       // 25
 // console.log(processData(true));    // "Unsupported data type"
 
+
+
+// Never type
+function handleError(message: string): never {
+  throw new Error(message);
+}
+
+// handleError("Something went wrong!"); // Throws an error and halts execution

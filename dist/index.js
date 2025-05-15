@@ -114,6 +114,10 @@ function processData(data) {
         return "Unsupported data type";
     }
 }
-console.log(processData("hello")); // "HELLO"
-console.log(processData(5)); // 25
-console.log(processData(true)); // "Unsupported data type"
+// console.log(processData(5));       // 25
+// console.log(processData(true));    // "Unsupported data type"
+// Never type
+function handleError(message) {
+    throw new Error(message);
+}
+// handleError("Something went wrong!"); // Throws an error and halts execution
