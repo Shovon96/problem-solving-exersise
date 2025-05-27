@@ -61,3 +61,34 @@ do {
 } while (i < 5);
 ```
 এখানে কমপক্ষে একবার loop অবশ্যই execute হবে, condition false হলেও।
+
+
+## 4. What are generics in TypeScript?
+
+### Answer:
+
+Generics allow you to write reusable components যেখানে type later define করা যায়।
+এটা dynamic type কিন্তু still type-safe থাকে।
+
+```typescript
+function identity<T>(arg: T): T {
+  return arg;
+}
+
+let output = identity<string>("Hello");
+```
+`<T>` হলো generic টাইপ। function টি যেকোনো টাইপ নিতে পারে, কিন্তু return এর টাইপও সেইটাই হবে।
+
+
+## 5. What is "never" type in TypeScript?
+
+### Answer: 
+
+`never` টাইপ মানে, যেই function বা variable কখনই কোনো value return করবে না বা complete হবে না।
+
+```typescript
+function throwError(message: string): never {
+  throw new Error(message);
+}
+```
+এই function টি কখনই naturally return করবে না — এটি exception throw করে program থামিয়ে দেবে।
