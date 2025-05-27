@@ -25,3 +25,39 @@ let age = 25; // Type is inferred as number
 - Supports OOP concepts (like classes, interfaces)
 
 - TypeScript ব্যবহার করলে কোড অনেক clean হয় এবং বড় প্রজেক্টে maintain করা সহজ হয়।
+
+
+## 3. Explain Loops in Typescript?
+
+### Answer:
+একটি loop statement allow করে কোন একটা statement বা একাধিক statement বারবার execute করতে।
+TypeScript বিভিন্ন ধরনের loop দেয় যাতে আমরা সহজে looping handle করতে পারি।
+
+- `for` loop হচ্ছে একটা definite loop. মানে যেই loop এর iteration সংখ্যা fixed বা আগে থেকে জানা থাকে।
+```typescript
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+```
+এই loop টি ৫ বার চলবে — ০ থেকে ৪ পর্যন্ত।
+
+- `while` loop তখন চলবে যখন condition টি true হবে।
+```typescript
+let i = 0;
+while (i < 5) {
+  console.log(i);
+  i++;
+}
+```
+এখানে, যতক্ষণ i < 5, ততক্ষণ loop চলবে।
+
+- `do...while` loop দেখতে অনেকটা `while` loop এর মতোই।
+তবে পার্থক্য হলো — এই loop প্রথমে body execute করে, তারপর condition check করে।
+```typescript
+let i = 0;
+do {
+  console.log(i);
+  i++;
+} while (i < 5);
+```
+এখানে কমপক্ষে একবার loop অবশ্যই execute হবে, condition false হলেও।
