@@ -12,3 +12,16 @@ JavaScript এ variable এর type define করতে হয় না, কিন
 let name: string = "Rakib"; // TypeScript
 let age = 25; // Type is inferred as number
 ```
+
+## 2. What are the benefits of using TypeScript?
+
+### Answer: 
+- Early error detection (compile time এ error ধরতে পারে)
+
+- Better IDE support (auto-complete, type hints)
+
+- More readable and maintainable code
+
+- Supports OOP concepts (like classes, interfaces)
+
+- TypeScript ব্যবহার করলে কোড অনেক clean হয় এবং বড় প্রজেক্টে maintain করা সহজ হয়।
